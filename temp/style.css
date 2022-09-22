@@ -1,0 +1,14 @@
+body{
+    background-color: #555;
+}
+.warpper{
+display: flex;
+justify-content: center;
+}
+.frmOne{
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}

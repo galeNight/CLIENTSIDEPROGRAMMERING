@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1000;
+    background: #fff;
+}
+
+.page-head, .page-foot {
+    background-color: aquamarine;
+    height: 70px;
+}
+
+.page-head {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;    
+    position: relative;
+     background-size:cover;
+     background-position: 50% 50%;
+     background: transparent;
+    /* background-repeat:no-repeat;   */
+    /* background-size: 100%; */
+}
+.page-head::after{
+    background-image: url(../img/moon.jpg);
+    background-size:cover ;
+    opacity: 0.9;
+    background-position: 50% 50%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+label[for="check"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40px;
+    width: 50px;
+    /* border: solid 1px #000; */
+}
+
+#check {
+    display: none;
+}
+
+.layer {
+    height: 6px;
+    background-color: blue;
+}
+
+.navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: chocolate;
+    /* min-height: 100px; */
+    display: none;
+}
+
+#check:checked ~.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 24px 0;
+    /* z-index: 1; */
+}
+.nav-item {
+    padding: 30px;
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 790px) {
+    label[for="check"] {
+        display: none;
+    }
+    .page-head {
+        justify-content: center;
+        padding: 0;
+    }
+    .navigation {
+        display: flex;
+        position: static;
+        height: 100%;
+        justify-content: space-between;
+        background-color: transparent;
+        /* border: solid red 1px; */
+    }
+    .nav-item {
+        color: blue;
+        font-size: 1em;
+        
+        /* padding: 20px; */
+    }
+}
