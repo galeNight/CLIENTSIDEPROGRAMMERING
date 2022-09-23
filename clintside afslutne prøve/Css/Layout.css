@@ -1,0 +1,12 @@
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    min-height: 100vh;
+}
+.page-head {
+    border: 1px solid red;
+    height: 200px;
+    background-image: url(../Img/banner.jpg);
+}
